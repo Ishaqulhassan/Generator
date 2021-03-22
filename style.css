@@ -1,0 +1,74 @@
+.navbar{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;  
+    background-color: rgb(255, 222, 160) !important;
+}
+
+.nav-link:hover{
+    background-color: rgb(250, 198, 131);  
+}
+
+.carousel-inner>.carousel-item{
+    text-align: center;   
+}
+.carousel-inner img{
+    display:inline-block  !important;
+    } 
+.card-img-top{
+    width: 250px;   
+}
+.card-title{
+    text-align: center;
+}
+.card1,.card2,.card3{
+    display: flex; 
+    width:300px; 
+    height:100px ;
+    background-color: wheat;
+    box-shadow: 6px 6px 6px black;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.fa-truck,.fa-headphones,.fa-thumbs-o-up{
+    font-size: 40px;
+    margin-right: 10px;
+}
+.mainclass{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row; flex-wrap: wrap;
+    justify-content: space-around; 
+    padding-bottom: 40px;
+    padding-top: 40px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.card{
+    border-radius: 10px;
+    border-width: 5px;
+    border-color:black;
+    border-style: double;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;   
+}
+.cont2{
+    padding-bottom: 40px;
+}
+.row1{
+    background-color: rgb(36, 37, 51);
+    height: 50px;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding-top: 15px;
+    color: white;
+}
+.form-label{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.table{
+    text-align: center;
+}
+.body1{
+    background-color: lightgoldenrodyellow;
+}
+
+  
