@@ -54,10 +54,25 @@
                 <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
               </li>
               <li class="nav-item active">
+                <a class="nav-link active" href="./applicationform.html">Application Form</a>
+              </li>
+              <li class="nav-item active">
                 <a class="nav-link active" href="./customer.html">Customer</a>
               </li>
               <li class="nav-item active">
                 <a class="nav-link active" href="./packages.html">Packages</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link active" href="./pandingforms.html">Panding Forms</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link active" href="./dues.html">Dues</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link active" href="./duesreport.html">Dues Report</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link active" href="./recipt.html">Recipt</a>
               </li>
               <li class="nav-item active">
                 <a class="nav-link active" href="./user.html">Login</a>
@@ -71,8 +86,14 @@
 
       <!-- Navber End -->
 
+      <h1 class="h1">Customer Form</h1>
 
       <!-- Form Start -->
+
+      <div class="mb-3 form-control-lg">
+        <label for=""  class="form-label" id='lblKeyLabel' style="visibility:hidden;">Customer Key : </label>
+        <label for="" id='lblKey'></label>
+      </div>
 
       <div class="mb-3 form-control-lg">
         <label for="exampleFormControlTextarea1" class="form-label">Customer Name</label>
@@ -82,7 +103,6 @@
       <div class="mb-3 form-control-lg">
         <label for="exampleFormControlTextarea1" class="form-label">CNIC</label>
         <input type="text" class="form-control" id="txtcnic" placeholder="Enter Your CNIC Number" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-        
       </div>
 
       <div class="mb-3 form-control-lg">
@@ -98,26 +118,47 @@
         <textarea class="form-control" id="txtadd" rows="3"></textarea>
       </div>
 
-      <div>
-          <label for="" class="form-control-lg form-label">Joining Date : </label>
-          
-          <input type="date" name="" id="txtjd" class="form-control-lg form-label">
+      
+      <div class="row form-control-lg">
+
+        <div class="mb-3 form-control-lg col-md-6">
+          <label for="exampleFormControlTextarea1" class="form-label">Joining Date</label>
+          <br>
+          <input type="date" name="" id="txtjd" class="form-control-lg form-label col-md-12">
+        </div>
+
+
+        <div class="mb-3 form-control-lg col-md-6">
+            <label for="exampleFormControlTextarea1" class="form-label">Packages</label>
+            <select class="form-select form-label form-control-lg" aria-label="Default select example" id="chkpkg">
+              <option value="">Select Please---</option>    
+            </select>
+        </div>
       </div>
 
-      <br>
+      <!-- <div class="row form-control-lg">
+
+        <div class="mb-3 form-control-lg ">
+          <label for="exampleFormControlTextarea1" class="form-label">Joining Date</label>
+          <br>
+          <input type="date" name="" id="txtjd" class="form-control-lg form-label col-md-12">
+        </div>
+      </div>
+
+      
 
       <div>
         <label for="" class="form-control-lg form-label">Packages : </label>
         <select name="" id="chkpkg" class="form-control-lg">
             <option value="">Please Select---</option>
         </select>
-      </div>
+      </div> -->
 
       <br>
 
-      <div class="d-grid gap-2 col-6 mx-auto">
-        <button class="btn btn-primary" type="button" onclick="customerbook()">Submit</button>
-        
+      <div class="btnselfcss gap-2 d-md-block">
+        <button class="btn btn-grad btn-light" type="button" id="btnSubmit" onclick="customerbook()">Submit</button>
+        <button class="btn btn-grad2 btn-light" type="button" id="btnCancel" onclick="funCancel()" style="visibility:hidden;">Cancel</button>
       </div>
 
 
@@ -126,7 +167,7 @@
       <br>
 
 
-      <div class="container">
+      <div class="container form-control-lg">
         <table id="tblPkg" class="table table-bordered">
           <thead class="bg-light thead-light">
             <tr class="table-dark">
@@ -134,6 +175,8 @@
               <th scope="col">Key</th>
               <th scope="col">Name</th>
               <th scope="col">Cell No.</th>
+              <th scope="col">Edit Button</th>
+              <th scope="col">Delete Button</th>
               
   
             </tr>

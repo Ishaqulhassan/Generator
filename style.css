@@ -2,38 +2,67 @@
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 20px;  
     background-color: rgb(255, 222, 160) !important;
+    
 }
-
 .nav-link:hover{
-    background-color: rgb(250, 198, 131);  
+    background-image: linear-gradient(to right, rgb(255, 200, 129) , white);
+    font-size: 22px;
+    border-radius: 10px;
+    /* text-decoration-line: underline;
+    text-decoration-color: darkorange; */
+    /* background-color: rgb(250, 198, 131);   */
+}
+.h1{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.carousel-inner>.carousel-item{
+/* .carousel-inner>.carousel-item{
     text-align: center;   
 }
 .carousel-inner img{
     display:inline-block  !important;
-    } 
+} */
+
+.sliderimg{
+    text-align: center;
+}
+
+.img-fluid{
+    width: 730px;
+}
+
 .card-img-top{
     width: 250px;   
 }
 .card-title{
     text-align: center;
+
 }
+
 .card1,.card2,.card3{
+    margin-top: 30px;
     display: flex; 
     width:300px; 
     height:100px ;
-    background-color: wheat;
+    background-image: linear-gradient(to left, rgba(255,0,0,0), rgb(250, 198, 131));
     box-shadow: 6px 6px 6px black;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
+
 }
+
+
+
+
 .fa-truck,.fa-headphones,.fa-thumbs-o-up{
     font-size: 40px;
     margin-right: 10px;
 }
+
 .mainclass{
     margin-top: 10px;
     display: flex;
@@ -43,16 +72,19 @@
     padding-top: 40px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
 .card{
     border-radius: 10px;
     border-width: 5px;
     border-color:black;
     border-style: double;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;   
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;     
 }
+
 .cont2{
     padding-bottom: 40px;
 }
+
 .row1{
     background-color: rgb(36, 37, 51);
     height: 50px;
@@ -61,14 +93,121 @@
     padding-top: 15px;
     color: white;
 }
+
 .form-label{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
 .table{
     text-align: center;
 }
+
 .body1{
-    background-color: lightgoldenrodyellow;
+    background-color: lightgoldenrodyellow;  
 }
 
-  
+
+
+.btn-grad {background-image: linear-gradient(to right, #0f3a55 0%, #2bb2f1  51%, #0f3a55  100%)}
+.btn-grad {
+    width: 200px;
+   margin: 10px;
+   padding: 15px 45px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 20px #eee;
+   border-radius: 10px;
+   
+}
+.btn-grad:hover {
+    box-shadow: 12px 12px 12px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+}
+
+.btn-grad2 {background-image: linear-gradient(to right, #621919 0%, #f35b5b  51%, #621919  100%)}
+.btn-grad2 {
+    width: 200px;
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    
+}
+.btn-grad2:hover {
+    box-shadow: 12px 12px 12px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+}
+ 
+.btn-grad3 {background-image: linear-gradient(to right, #246445 0%, #0cf0dd  51%, #246445  100%)}
+.btn-grad3 {
+    width: 200px;
+   margin: 10px;
+   padding: 15px 45px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 20px #eee;
+   border-radius: 10px;
+   
+}
+.btn-grad3:hover {
+    box-shadow: 12px 12px 12px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+}
+
+.btn-grad4 {background-image: linear-gradient(to right, #774505 0%, #facd3a  51%, #774505  100%)}
+.btn-grad4 {
+    width: 200px;
+   margin: 10px;
+   padding: 15px 45px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 20px #eee;
+   border-radius: 10px;
+   
+}
+.btn-grad4:hover {
+    box-shadow: 12px 12px 12px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+}
+
+.btn-grad5 {background-image: linear-gradient(to right, #490b66 0%, #ed54fb  51%, #490b66  100%)}
+.btn-grad5 {
+    width: 200px;
+   margin: 10px;
+   padding: 15px 45px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 20px #eee;
+   border-radius: 10px;
+   
+}
+.btn-grad5:hover {
+    box-shadow: 12px 12px 12px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+}
+
+.btnselfcss{
+    text-align: center;
+}

@@ -12,9 +12,14 @@ var packagedata=[]
 })
 
 var dataToFillTable=[]
-
+//console.log(dRefPkg)
+console.log('yes')
+    //dReff.orderByChild('Status').equalTo(1).on("child_added",function(getpackagedata){
     dReff.on("child_added",function(getpackagedata){
+        console.log('yes')
+        console.log(getpackagedata.val())
         var abc=getpackagedata.val()
+        console.log(abc)
         dataToFillTable=[]
         dataToFillTable.push(abc)
         fillTable()
@@ -26,6 +31,7 @@ function fillTable(){
 
 
     for(i=0; i<dataToFillTable.length; i++){
+        if(dataToFillTable[i]['Status']=="1"){
         var tr=document.createElement("tr")
         
         var td=document.createElement("td")
@@ -49,22 +55,50 @@ function fillTable(){
         btnEdit.setAttribute("id",dataToFillTable[i]["key"])
         td.appendChild(btnEdit)
         tr.appendChild(td)
-        tab.appendChild(tr)
+        tabda.appendChild(tr)
 
+        var td=document.createElement("td")
+        var btnDelete=document.createElement("button")
+        var bText="Delete"
+        btnDelete.innerText=bText
+        btnDelete.setAttribute("onclick","funcdelete(this)")
+        btnDelete.setAttribute("id",dataToFillTable[i]["key"])
+        td.appendChild(btnDelete)
+        tr.appendChild(td)
+        tabda.appendChild(tr)
     }
-
+    }
     
+}
+function funCancel(){
+        document.getElementById('btnSubmit').innerText="Submit"
+        document.getElementById('btnCancel').setAttribute('style','visibility:hidden;')
+
+        document.getElementById("txtcn").value=""
+        document.getElementById("txtcnic").value=""
+        document.getElementById("txtcellno").value=""
+        document.getElementById("txtadd").value=""
+        document.getElementById("txtjd").value=""
+        document.getElementById('lblKey').innerText=""
 }
 function funcEdit(e){
     console.log(e.id)
     dReff.child(e.id).once("value",pkgDetail =>{
-        //console.log(pkgDetail.val())
+         document.getElementById('btnSubmit').innerText="Update"
+         document.getElementById('btnCancel').setAttribute('style','visibility:visible;')
+         document.getElementById('lblKeyLabel').setAttribute('style','visibility:visible;')
+         document.getElementById('lblKey').innerText=pkgDetail.val().key
          document.getElementById("txtcn").value=pkgDetail.val().CustomerName
          document.getElementById("txtcellno").value=pkgDetail.val().Cellno
          document.getElementById("txtcnic").value=pkgDetail.val().CNIC
          document.getElementById("txtadd").value=pkgDetail.val().Address
          document.getElementById("txtjd").value=pkgDetail.val().Joiningdate
     })
+    }
+
+function funcdelete(d){
+    //dReff.child(d.id).remove()
+    
 }
 
 function fillpackage(){
@@ -88,26 +122,35 @@ function Cf(name,cnic,cellno,address,joiningdate,packages,key,pkgKey){
 }
 
 function customerbook(){
-    var key=dReff.push().key
-    var cname=document.getElementById("txtcn").value
-    var ccnic=document.getElementById("txtcnic").value
-    var ccell=document.getElementById("txtcellno").value
-    var caddress=document.getElementById("txtadd").value
-    var cjoindate=document.getElementById("txtjd").value
+   var key
+   key=dReff.push().key
+
+   if(document.getElementById('lblKey').innerText==""){
+
+   }
+   else{
+       key=document.getElementById('lblKey').innerText
+   }
+
+    var name=document.getElementById("txtcn").value
+    var cnic=document.getElementById("txtcnic").value
+    var cellno=document.getElementById("txtcellno").value
+    var address=document.getElementById("txtadd").value
+    var joiningdate=document.getElementById("txtjd").value
 
     var ddl=document.getElementById("chkpkg")
     var pkgKey=ddl.options[ddl.selectedIndex].value
 
-    var pkgName=ddl.options[ddl.selectedIndex].text
+    var packages=ddl.options[ddl.selectedIndex].text
 
-    var objcf=new Cf(cname,ccnic,ccell,caddress,cjoindate,pkgName,key,pkgKey)
+    var objcf=new Cf(name,cnic,cellno,address,joiningdate,packages,key,pkgKey)
     dReff.child(key).set(objcf)
     console.log(objcf)
 
-    var cname=document.getElementById("txtcn").value=" "
-    var ccnic=document.getElementById("txtcnic").value=" "
-    var ccell=document.getElementById("txtcellno").value=" "
-    var caddress=document.getElementById("txtadd").value=" "
-    var cjoindate=document.getElementById("txtjd").value=" "
+    document.getElementById("txtcn").value=" "
+    document.getElementById("txtcnic").value=" "
+    document.getElementById("txtcellno").value=" "
+    document.getElementById("txtadd").value=" "
+    document.getElementById("txtjd").value=" "
 
 }

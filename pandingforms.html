@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Packages</title>
+    <title>Panding Forms</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
     <script>
@@ -26,7 +27,7 @@
       // firebase.analytics();
   </script>
     <link rel="stylesheet" href="style.css">
-    <script src="packages.js"></script>
+    <script src="pandingforms.js"></script>
 </head>
 <body class="body1">
 
@@ -34,7 +35,7 @@
 
     
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
           <img src="./G_LOGO.png"  width="60px" alt="">
@@ -61,6 +62,7 @@
               <li class="nav-item active">
                 <a class="nav-link active" href="./packages.html">Packages</a>
               </li>
+              
               <li class="nav-item active">
                 <a class="nav-link active" href="./pandingforms.html">Panding Forms</a>
               </li>
@@ -84,40 +86,11 @@
     </nav>
 
       <!-- Navber End -->
-
-      <h1 class="h1">Packages</h1>
-
-      <!-- Form Start -->
-
-      <div class="mb-3 form-control-lg">
-        <label for=""  class="form-label" id='lblKeyLabel' style="visibility:hidden;">Package Key : </label>
-        <label for="" id="labelKey"></label>
-      </div>
-
-
-      <div class="row form-control-lg">
-      <div class="mb-3 form-control-lg col-md-6">
-        <label for="exampleFormControlTextarea1" class="form-label">Packages</label>
-        <input type="text" id="txtpkg" class="form-control" required="required" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">  
-      </div>
       
-      <div class="mb-3 form-control-lg col-md-6">
-        <label for="exampleFormControlTextarea1" class="form-label">Monthly Charges</label>
-        <input type="text" class="form-control" id="txtchg" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">  
-      </div>
-
-      </div>
-
-      <!-- Form End -->
-
-
-      <div class="btnselfcss gap-2 d-md-block">
-        <button class="btn btn-grad btn-light" type="submit" id="btnSubmit" onclick="conform()">Submit</button>
-        <button class="btn btn-grad2 btn-light" type="button" id="btnCancel" onclick="funcCancel()" style="visibility:hidden;">Cancel</button>
-      </div>
-
+      <h1 class="h1">Panding Form</h1>
 
       <br>
+      <!-- Table Start -->
 
       <div class="container form-control-lg">
         <table id="tblPkg" class="table table-bordered">
@@ -125,10 +98,9 @@
             <tr class="table-dark">
   
               <th scope="col">Key</th>
-              <th scope="col">Packages</th>
-              <th scope="col">Monthly Charges</th>
-              <th scope="col">Edit Button</th>
-              <th scope="col">Delete Button</th>
+              <th scope="col">Name</th>
+              <th scope="col">Cell No.</th>
+              <th scope="col">Join Button</th>
               
   
             </tr>
@@ -138,12 +110,10 @@
           </tbody>
         </table>
       </div>
-      
-      
-      
-      
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+      <!-- Table End -->
+
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
 </body>
 </html>
